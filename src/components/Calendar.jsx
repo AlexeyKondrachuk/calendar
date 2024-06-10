@@ -4,7 +4,7 @@ import { createDays } from "./createDays";
 
 const days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
 const months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
-const monthsNominativeСase = months.map(month => {
+const monthsСase = months.map(month => {
   return (month + 'а').replace(/[ьй]а$/, 'я');
 });
   
@@ -21,7 +21,7 @@ export default function Calendar({ date }) {
         <div className='ui-datepicker-material-day'>{days[date.getDay()]}</div>
         <div className='ui-datepicker-material-date'>
           <div className='ui-datepicker-material-day-num'>{date.getDate()}</div>
-          <div className='ui-datepicker-material-month'>{monthsNominativeСase[date.getMonth()]}</div>
+          <div className='ui-datepicker-material-month'>{monthsСase[date.getMonth()]}</div>
           <div className='ui-datepicker-material-year'>{date.getFullYear()}</div>
         </div>
       </div>
